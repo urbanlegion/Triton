@@ -35,7 +35,7 @@ class Dolphin extends Animals implements AnimalSpeechRecognition
         $this->vocal = $vocal;
     }
     public function vocal($vocal) {
-        return "I speak therefore I am: " . $this->vocalIn . "<br />n";
+        return "I speak therefore I am: " . $this->vocalIn . "<br />";
     }
     public function getGenes() {
         return " <br>-My DNA sequence is: " . parent::getGeneSequence() . "<br />";
@@ -52,4 +52,4 @@ echo $willy001->getGenes();
 echo 'this is the sleep sound: '.$willy001->sleep.'<br>';
 echo 'My age is: '.$willy001->getAge();
 echo $willy001->getHunter($willy001->hunter);
-echo 'My swim sound is: '.$willy001->swim;
+echo '<br>My swim sound is: '.$willy001->swim;

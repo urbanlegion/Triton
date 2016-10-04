@@ -32,7 +32,7 @@ class Eagle extends Animals implements AnimalSpeechRecognition{
         $this->vocal = $vocal;
     }
     public function vocal($vocal) {
-        return "I speak therefore I am: " . $this->vocalIn . "<br />n";
+        return "I speak therefore I am: " . $this->vocalIn . "<br />";
     }
     public function getGenes() {
         return " <br>-My DNA sequence is: " . parent::getGeneSequence() . "<br />";
