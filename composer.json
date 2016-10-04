@@ -1,0 +1,15 @@
+{
+    "name": "yearzero/triton",
+    "description": "A Speech recognition interface is implemented to each animal class with some parameters passed through a polymorphic Animals Absract class. Some properties are being set by the constructor and others are pre-determined as to the exercise.",
+    "type": "project",
+    "license": "GPL V1.0",
+    "authors": [
+        {
+            "name": "Erez T",
+            "email": "erez.tall1977@gmail.com"
+        }
+    ],
+    "require": {
+        "slim/slim": "^3.0"
+    }
+}
