@@ -47,3 +47,4 @@ echo $bee001->getHunterStatus($bee001->hunter);
 echo '<br>My flying sound is: '.$bee001->fly;
 echo '<br>My sleeping sound is: '.$bee001->sleep;
 echo '<br>My age is: '.$bee001->age;
+echo '<h1><a href="../App/index.php">Back to Home Page </a></h1>';

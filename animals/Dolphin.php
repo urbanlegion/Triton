@@ -53,3 +53,4 @@ echo 'this is the sleep sound: '.$willy001->sleep.'<br>';
 echo 'My age is: '.$willy001->getAge();
 echo $willy001->getHunter($willy001->hunter);
 echo '<br>My swim sound is: '.$willy001->swim;
+echo '<h1><a href="../App/index.php">Back to Home Page </a></h1>';

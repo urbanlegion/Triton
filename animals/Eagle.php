@@ -50,3 +50,4 @@ echo '<br>My flying sound is: '.$eagle001->fly;
 echo '<br>My sleeping sound is: '.$eagle001->sleep;
 echo '<br>My eating sound sounds like this: '.$eagle001->eat;
 echo '<br>My age is: '.$eagle001->age;
+echo '<h1><a href="../App/index.php">Back to Home Page </a></h1>';

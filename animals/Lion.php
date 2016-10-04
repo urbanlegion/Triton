@@ -56,5 +56,6 @@ echo '<br>';
 echo $lion001->getHunterStatus($lion001->hunter);
 echo '<br>My eating sound sounds like this: '.$lion001->eat;
 echo '<br>My Age is: '.$lion001->age;
+echo '<h1><a href="../App/index.php">Back to Home Page </a></h1>';
 
 
