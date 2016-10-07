@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="#" id="get-data">Get JSON data</a>
+<div id="show-data"></div>
+
+<script src="js/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#get-data').click(function () {
+            var showData = $('#show-data');
+            $.getJSON('lib/games.json', function (data) {
+                console.log(data);
+                var games_name = data.featured.map(function (feature) {
+                    return feature.game_name;
+                });
+                var stringed = $.makeArray(games_name);
+                var sanitized = 'http://cacheimg.casinomidas.com/images/www/games/minipods/'
+                        +stringed.replace(/["'?! -,]/g, "")
+                        +'-minipod.jpg';
+console.log(sanitized);
+/*                var games_img = data.featured.map(function (feature) {
+                    var gameName = feature.game_name;
+                    var sanitized =
+                            'http://cacheimg.casinomidas.com/images/www/games/minipods/'
+                            +gameName.replace(/["'?! -,]/g, "")
+                            +'-minipod.jpg';
+                    return sanitized;
+                });*/
+                showData.empty();
+                if (games_name.length) {
+                    var content = '<div class="pika">' + games_name.join('</div><div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 game_body">' +
+                                    '<div class="game_header"><h1>')
+                                    + '</div></h1></div><div class="game_image shadowfilter_games"><a href="#">' +
+                            '<img src=""></a></div>';
+
+                    var list = $('<div class="game" />').html(content);
+
+                    showData.append(list);
+                }
+            });
+            showData.text('Loading the JSON file.');
+        });
+    });
+
+
+</script>
+</body>
+</html>
