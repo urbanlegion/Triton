@@ -1,3 +1,8 @@
+<?php
+if(empty($_GET['type'])){
+    $_GET['type'] = 'featured';
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,10 +48,10 @@
 
 <?php
 $game_type = $_GET['type'];
+
 $json = file_get_contents('lib/games.json');
 $data =  json_decode($json);
-/*$featured = $data->featured;
-$slots = $data->slots;*/
+
 $chosenGame = $data->$game_type;
 /*echo '<pre>';
 print_r($data->featured);
